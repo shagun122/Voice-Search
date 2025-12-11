@@ -1,136 +1,70 @@
-Voice Assistant – AI Powered Desktop Assistant
+# 🎙️ Voice Assistant  
+[![Python](https://img.shields.io/badge/Python-3.8%2B-blue.svg)](https://www.python.org/)  
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)  
+[![Build Status](https://img.shields.io/badge/Build-Passing-brightgreen.svg)]()  
+[![Contributions Welcome](https://img.shields.io/badge/Contributions-Welcome-orange.svg)]()
 
-A smart, conversational Voice Assistant built using Python that listens to your voice commands, understands them using NLP, and performs real-time tasks such as searching the web, opening applications, fetching information, playing music, automating workflows, and much more.
+---
 
-This project demonstrates practical implementation of Speech Recognition, Text-to-Speech, NLP, APIs, and Automation.
+## 📌 Overview  
+**Voice Assistant** is an AI-powered personal assistant built using **Python**.  
+It performs real-time speech recognition, converts speech to text, automates tasks, searches the web, provides text-to-speech feedback, opens applications, and interacts naturally with users.
 
-🚀 Features
+Designed as a lightweight yet powerful automation tool, the project demonstrates applied AI/ML concepts including NLP, speech processing, and intelligent workflow automation.
 
-✔️ Wake Word / Command-based Activation
-✔️ Speech-to-Text (STT) using advanced recognition engines
-✔️ Text-to-Speech (TTS) natural voice output
-✔️ Conversational responses based on NLP
-✔️ Open websites & applications (Chrome, YouTube, etc.)
-✔️ Search anything on Google
-✔️ Play YouTube songs or videos
-✔️ Weather updates, news reading, facts, jokes
-✔️ File & system automation
-✔️ Custom commands tailored for user needs
-✔️ Fully modular & extensible codebase
+---
 
-🛠️ Tech Stack
-Component	Technology
-Language	Python
-Speech-to-Text	SpeechRecognition, Google speech API
-Text-to-Speech	pyttsx3 / gTTS
-Audio Input	PyAudio
-NLP Processing	Python logic + external APIs
-Automation	os, subprocess, custom handlers
-📂 Project Structure
-Voice-Assistant/
-│── modules/
-│    ├── speech_to_text.py
-│    ├── text_to_speech.py
-│    ├── commands.py
-│    └── utils.py
-│── main.py
-│── requirements.txt
-│── README.md
+## 🚀 Key Features  
 
+- 🎤 **Speech Recognition** – Understands voice commands using advanced ASR models  
+- 🗣️ **Text-to-Speech (TTS)** – Responds using natural voice output  
+- 🌐 **Smart Web Search** – Performs Google queries and retrieves information  
+- 🧭 **Task Automation** – Opens apps, plays music, sends emails, and more  
+- 🖥️ **System Control** – Shutdown, restart, volume control, etc.  
+- 🔄 **Continuous Listening Mode** – Responds without repeated wake prompts  
+- 🧠 **Modular Architecture** – Easily extendable command handlers  
+- ⚙️ **Highly Customizable** – Environment variables and config-based setup  
 
-Your actual folder structure may vary — edit this section if needed.
+---
 
-🔧 Installation & Setup
-1️⃣ Clone the Repository
-git clone https://github.com/your-username/voice-assistant.git
-cd voice-assistant
+## 🛠️ Tech Stack  
 
-2️⃣ Install Dependencies
-pip install -r requirements.txt
+| Technology | Purpose |
+|-----------|----------|
+| ![Python](https://img.shields.io/badge/Python-3.8+-blue?logo=python&logoColor=white) | Core programming language |
+| ![SpeechRecognition](https://img.shields.io/badge/SpeechRecognition-API-green) | Speech-to-text processing |
+| ![PyAudio](https://img.shields.io/badge/PyAudio-Microphone-yellow) | Audio input handling |
+| ![gTTS](https://img.shields.io/badge/gTTS-Text--to--Speech-red) | Voice output |
+| ![BeautifulSoup](https://img.shields.io/badge/BeautifulSoup-Web%20Scraping-purple) | Extracting content online |
+| ![Python Packages](https://img.shields.io/badge/Standard%20Libraries-OS%2C%20Subprocess%2C%20JSON-lightgrey) | System controls |
 
-3️⃣ Install PyAudio (if required)
+---
 
-Windows
+## 🧩 System Architecture / Workflow  
 
-pip install pipwin
-pipwin install pyaudio
-
-
-Mac/Linux
-
-sudo apt-get install portaudio19-dev python3-pyaudio
-
-▶️ How to Run
-
-Simply execute:
-
-python main.py
-
-
-Speak your command after the assistant says “Listening…”
-
-🧠 Example Commands
-
-You can try commands like:
-
-"Open YouTube"
-
-"Play music on YouTube"
-
-"Search for AI jobs on Google"
-
-"What is the weather today?"
-
-"Tell me a joke"
-
-"Shutdown the system" (if enabled)
-
-🧩 Customization
-
-You can modify:
-
-Wake word
-
-Supported commands
-
-Voice gender/speed/rate
-
-APIs for external data
-
-Automation scripts
-
-All logic is placed inside dedicated modules for easy extension.
-
-🛡️ Requirements / Prerequisites
-
-Python 3.8+
-
-Microphone access
-
-Stable Internet (for online STT features)
-
-📌 Future Enhancements (Optional)
-
-Integrate LLM (GPT-based) conversational intelligence
-
-Add face recognition login
-
-Add GUI interface
-
-Add Offline speech recognition
-
-Add Task reminders, calendar integration
-
-🤝 Contribution
-
-Contributions are welcome!
-Feel free to open Issues or create Pull Requests.
-
-📜 License
-
-This project is licensed under the MIT License.
-You are free to use, modify, and distribute it.
-
-⭐ Support
-
-If you like this project, please ⭐ star the repository — it motivates me to build more!
+```text
+               ┌──────────────────┐
+               │   Microphone      │
+               └─────────┬────────┘
+                         │ Audio Input
+                         ▼
+                ┌──────────────────┐
+                │ Speech Recognition│
+                │  (STT Engine)     │
+                └─────────┬────────┘
+                         │ Command Text
+                         ▼
+              ┌──────────────────────┐
+              │ Command Processor     │
+              │ (Intent + Task Logic) │
+              └──────────┬───────────┘
+                         │ Output Text / Action
+                         ▼
+            ┌────────────────────────────┐
+            │ Text-to-Speech Engine (TTS)│
+            └────────────┬──────────────┘
+                         │ Audio Output
+                         ▼
+                ┌──────────────────┐
+                │   Speaker         │
+                └──────────────────┘
